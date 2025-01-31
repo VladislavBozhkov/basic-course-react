@@ -5,25 +5,30 @@ import Header from './components/Header';
 
 
 const products: Product[] = [
-    {
-        title: 'молоко',
-        price: '100р'
+    {   
+      id: 1,
+      title: 'молоко',
+      price: '100р'
     },
-    {
-        title: 'хлеб',
-        price: '50р'
+    {   
+      id: 2,
+      title: 'хлеб',
+      price: '50р'
     },
-    {
-        title: 'яйца',
-        price: '120р'
+    { 
+      id: 3,
+      title: 'яйца',
+      price: '120р'
     },
-    {
-        title: 'сыр',
-        price: '200р'
+    { 
+      id: 4,
+      title: 'сыр',
+      price: '200р'
     }
 ];
 
 interface Product {
+  id : number
   title : string
   price : string
 } 
@@ -32,12 +37,15 @@ interface WayToTeachProps {
   products : Product[]
 }
 
+console.log(products)
+
 const WayToTeach: React.FC<WayToTeachProps> = ({products}) => {
   return(
     
     <ul>
       {products.map((product) => (
-        <li>
+        
+        <li key={product.id}>
           <span> {product.title} - {product.price}</span>
         </li>
       ))}
