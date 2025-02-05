@@ -1,0 +1,16 @@
+button {
+    padding: 10px 20px;
+    border: 8px;
+    font-weight: 600;
+}
+
+button:hover {
+    background-color: #46c20d;
+    color: wheat;
+    transition: 0.8s;
+}
+
+.button.active {
+    color: aquamarine;
+    background-color: rgb(5, 5, 5);
+}
